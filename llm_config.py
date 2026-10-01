@@ -23,4 +23,6 @@ def get_llm():
         api_key=api_key,
         base_url="https://api.groq.com/openai/v1",
         temperature=0.3,
-    )
+    max_tokens=1000,
+    reasoning_effort="low",
+)

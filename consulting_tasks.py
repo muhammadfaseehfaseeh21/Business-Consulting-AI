@@ -1,4 +1,3 @@
-
 from crewai import Task
 
 
@@ -30,6 +29,8 @@ def create_consulting_tasks(
 
         Clearly identify assumptions.
         Do not invent verified statistics.
+
+        Keep your answer under 200 words. Use short bullet points only.
         """,
 
         expected_output=(
@@ -38,7 +39,6 @@ def create_consulting_tasks(
 
         agent=market_agent
     )
-
 
     # TASK 2: BUSINESS ANALYSIS
 
@@ -54,6 +54,8 @@ def create_consulting_tasks(
         4. Strengths and weaknesses
         5. Opportunities and threats
         6. Business risks
+
+        Keep your answer under 200 words. Use short bullet points only.
         """,
 
         expected_output=(
@@ -63,7 +65,6 @@ def create_consulting_tasks(
         agent=business_agent,
         context=[market_task]
     )
-
 
     # TASK 3: MARKETING STRATEGY
 
@@ -78,6 +79,8 @@ def create_consulting_tasks(
         4. Customer acquisition
         5. Digital marketing strategy
         6. Marketing KPIs
+
+        Keep your answer under 200 words. Use short bullet points only.
         """,
 
         expected_output=(
@@ -105,6 +108,8 @@ def create_consulting_tasks(
 
         Label numerical estimates as assumptions.
         Do not present estimates as verified figures.
+
+        Keep your answer under 200 words. Use short bullet points only.
         """,
 
         expected_output=(
@@ -129,6 +134,8 @@ def create_consulting_tasks(
         4. Technology requirements
         5. Daily operations
         6. 30/60/90-day implementation milestones
+
+        Keep your answer under 200 words. Use short bullet points only.
         """,
 
         expected_output=(

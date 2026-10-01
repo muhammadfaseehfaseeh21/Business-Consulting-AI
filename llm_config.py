@@ -22,7 +22,7 @@ def get_llm():
         )
 
     return LLM(
-        model="openai/gpt-oss-120b",
+        model="groq/openai/gpt-oss-120b",
         api_key=api_key,
         base_url="https://api.groq.com/openai/v1",
         custom_openai=True,

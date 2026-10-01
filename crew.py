@@ -13,22 +13,14 @@ from consulting_tasks import create_consulting_tasks
 
 def run_business_consulting(business_info):
 
-    # Create agents
+    # Create six agents
 
     market_agent = create_market_research_agent()
-
     business_agent = create_business_analyst_agent()
-
     marketing_agent = create_marketing_agent()
-
     financial_agent = create_financial_agent()
-
     operations_agent = create_operations_agent()
-
     consultant_agent = create_strategy_consultant_agent()
-
-
-    # Collect agents
 
     agents = [
         market_agent,
@@ -38,7 +30,6 @@ def run_business_consulting(business_info):
         operations_agent,
         consultant_agent
     ]
-
 
     # Create tasks
 
@@ -52,8 +43,7 @@ def run_business_consulting(business_info):
         business_info
     )
 
-
-    # Create CrewAI team
+    # Create Crew
 
     consulting_crew = Crew(
         agents=agents,
@@ -62,8 +52,7 @@ def run_business_consulting(business_info):
         verbose=False
     )
 
-
-    # Run the team
+    # Execute
 
     result = consulting_crew.kickoff()
 

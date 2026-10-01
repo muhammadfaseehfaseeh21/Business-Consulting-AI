@@ -1,4 +1,3 @@
-
 import streamlit as st
 
 from crew import run_business_consulting
@@ -19,16 +18,11 @@ st.markdown("""
 <style>
 
 .stApp {
-    background: linear-gradient(
-        135deg,
-        #101827,
-        #172554,
-        #312e81
-    );
+    background: #ffffff;
 }
 
-h1, h2, h3, p, label {
-    color: white !important;
+h1, h2, h3, h4, p, label, li, td, th, span {
+    color: #111827 !important;
 }
 
 .stButton > button {
@@ -37,16 +31,20 @@ h1, h2, h3, p, label {
         #2563eb,
         #7c3aed
     );
-    color: white;
+    color: white !important;
     border-radius: 10px;
     border: none;
     padding: 12px;
     font-weight: bold;
 }
 
+.stButton > button p {
+    color: white !important;
+}
+
 .stButton > button:hover {
     background: #4f46e5;
-    color: white;
+    color: white !important;
 }
 
 </style>

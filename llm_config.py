@@ -1,12 +1,9 @@
-
 import os
 import streamlit as st
-
 from crewai import LLM
 
 
 def get_llm():
-
     api_key = os.getenv("GROQ_API_KEY")
 
     if not api_key:
@@ -22,13 +19,8 @@ def get_llm():
         )
 
     return LLM(
-    model="openai/gpt-oss-120b",
-    api_key=api_key,
-    base_url="https://api.groq.com/openai/v1",
-    temperature=0.3,
-)
+        model="openai/gpt-oss-120b",
         api_key=api_key,
         base_url="https://api.groq.com/openai/v1",
-        custom_openai=True,
-        temperature=0.3
+        temperature=0.3,
     )
